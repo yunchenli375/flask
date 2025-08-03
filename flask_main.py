@@ -19,3 +19,12 @@ def celsius2fahrenheit(celsius):
     return celsius * 9.0 / 5 + 32
 
 
+@app.route("/f/<celsius>")
+def f(celsius):
+    """Convert Celsius to Fahrenheit."""
+    try:
+        return f"{celsius} Celsius is {celsius2fahrenheit(float(celsius))} Fahrenheit"
+    except ValueError:
+        return "Invalid input, please provide a number."
+
+
