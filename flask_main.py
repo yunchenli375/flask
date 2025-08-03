@@ -28,3 +28,5 @@ def f(celsius):
         return "Invalid input, please provide a number."
 
 
+if __name__ == "__main__":
+    app.run()
